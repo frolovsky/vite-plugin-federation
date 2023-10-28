@@ -46,7 +46,7 @@ async function getSharedFromLocal(name) {
   }
 }
 function flattenModule(module, name) {
-  if (module.default) module = Object.assign({}, module.default, module)
+  if (module.default) module = Object.assign({}, module, module.default)
   moduleCache[name] = module
   return module
 }
